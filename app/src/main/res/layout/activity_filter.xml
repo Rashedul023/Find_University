@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blackback"
+    tools:context=".Filter_Activity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvl"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/countryFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="4dp"
+        android:ems="10"
+        android:hint="  Country"
+        android:inputType="textPersonName"
+        android:textColor="#FFFEFE"
+        android:textColorHint="#A89A9A"
+        app:layout_constraintBottom_toTopOf="@+id/cgpaFilter"
+        app:layout_constraintEnd_toStartOf="@+id/buttonCountry"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.77" />
+
+    <EditText
+        android:id="@+id/cgpaFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="4dp"
+        android:ems="10"
+        android:hint="  CGPA"
+        android:inputType="numberDecimal"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#A89A9A"
+        app:layout_constraintBottom_toTopOf="@+id/feeFilter"
+        app:layout_constraintEnd_toStartOf="@+id/buttonCgpa"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/feeFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="  Tuition Fee"
+        android:inputType="number"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#A89A9A"
+        app:layout_constraintBottom_toTopOf="@+id/rankFilter"
+        app:layout_constraintEnd_toStartOf="@+id/buttonFee"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/rankFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:hint="  Ranking"
+        android:inputType="number"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#A89A9A"
+        app:layout_constraintBottom_toTopOf="@+id/rvl"
+        app:layout_constraintEnd_toStartOf="@+id/buttonRank"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonCountry"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="#051E56"
+        android:text="Filter by country"
+        android:textColor="#FBFBFB"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCgpa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.835" />
+
+    <Button
+        android:id="@+id/buttonCgpa"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="#061F58"
+        android:text="Filter by CGPA"
+        android:textColor="#FBFBFB"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonFee"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/buttonFee"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="#051E57"
+        android:text="Filter by Fee"
+        android:textColor="#FBFBFB"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonRank"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/buttonRank"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#071D56"
+        android:text="Filter by Ranking"
+        android:textColor="#FBFBFB"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/rvl"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
